@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<div class="">
+  <%= homecontent %>
+</div>
+
+<div>
+
+<%  printcontent.forEach(function(iitr){ %>
+
+<div class="">
+  <h1><%= iitr.title %></h1>
+</div>
+<div class="">
+  <p>
+    <%=  (iitr.content).substring(0,100)  %>
+    <a href="contentarray/<%= iitr._id %>">...readmore</a>
+    </p>
+
+
+</div>
+<% }); %>
+</div>
+
+<%- include('partials/footer'); -%>
